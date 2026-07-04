@@ -1,0 +1,57 @@
+# =============================================================================
+# Purrrscribe — Standard .gitignore
+# Comprehensive template shared across all repos in this project.
+# Lines that don't apply to a given repo are simply inert — harmless to keep.
+# Add repo-specific entries below the "PROJECT-SPECIFIC" marker at the bottom.
+# =============================================================================
+
+# --- IDE / Editor ---
+.idea/
+*.iml
+.vscode/
+*.swp
+*.swo
+
+# --- OS junk ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+
+# --- Node / JS / Web tooling ---
+node_modules/
+npm-debug.log*
+dist/
+.env
+
+# --- Flutter / Dart (for future app repo use) ---
+.dart_tool/
+.packages
+.pub-cache/
+.pub/
+build/
+*.g.dart
+.flutter-plugins
+.flutter-plugins-dependencies
+coverage/
+
+# --- Logs & temp files ---
+*.log
+*.bak
+*.tmp
+
+# --- Secrets (safety net — see project security baseline) ---
+.env.local
+.secrets.txt
+*.pem
+*.key
+
+# --- PROJECT-SPECIFIC (add below as needed) ---
+
