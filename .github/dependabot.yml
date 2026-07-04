@@ -1,0 +1,11 @@
+# Purrrscribe — Dependabot version updates config
+# Only "github-actions" is configured for now — no other dependency
+# manifests exist yet (no pubspec.yaml, no package.json). Add ecosystems
+# here once real code/dependencies exist (e.g. "pub" for Flutter in
+# Chat 2+, or "npm" if website tooling is ever added).
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
