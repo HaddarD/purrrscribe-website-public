@@ -89,3 +89,50 @@ h3, h4, .gsc-comments-count {
 .gsc-timeline {
   border-color: #333a4d !important;
 }
+
+/* === Write/comment box: rounded, matches card style === */
+.gsc-comment-box {
+  border-radius: 16px !important;
+  border: 1px solid var(--color-border-default) !important;
+  box-shadow: 0 4px 20px rgba(0,0,0,.06) !important;
+  overflow: hidden !important;
+}
+/* Textarea already has bottom radius; ensure top box matches */
+.gsc-comment-box-main {
+  border-radius: 16px !important;
+}
+/* === Shadows on comment cards === */
+.gsc-comment {
+  box-shadow: 0 4px 18px rgba(0,0,0,.07) !important;
+}
+/* === Oldest / Newest toggle buttons === */
+.gsc-comments-count-title .BtnGroup .BtnGroup-item {
+  border-radius: 999px !important;
+  font-weight: 600 !important;
+  padding: 4px 14px !important;
+  border: 1px solid var(--color-border-default) !important;
+}
+.gsc-comments-count-title .BtnGroup .BtnGroup-item[aria-selected="true"],
+.gsc-comments-count-title .BtnGroup .BtnGroup-item.selected {
+  background: var(--color-accent-emphasis) !important;
+  color: var(--color-fg-on-emphasis) !important;
+  border-color: var(--color-accent-emphasis) !important;
+}
+.gsc-comments-count-title .BtnGroup .BtnGroup-item[aria-selected="false"],
+.gsc-comments-count-title .BtnGroup .BtnGroup-item:not(.selected) {
+  background: var(--color-canvas-subtle) !important;
+  color: var(--color-fg-muted) !important;
+}
+/* === Reply box rounded === */
+.gsc-reply-box .gsc-comment-box {
+  border-radius: 12px !important;
+}
+/* === "1 comment - powered by giscus" header === */
+.gsc-header {
+  border-bottom: none !important;
+}
+/* === Comment button (primary) pill shape === */
+.btn-primary {
+  border-radius: 999px !important;
+  font-weight: 700 !important;
+}
