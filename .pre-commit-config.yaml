@@ -1,0 +1,16 @@
+# Purrrscribe — pre-commit framework config
+# Language-agnostic checks only. Linting (language-specific) is added
+# per-repo once that repo has real code (see project progress doc).
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-added-large-files
+        args: ['--maxkb=5000']
+      - id: check-merge-conflict
+      - id: check-case-conflict
+      - id: mixed-line-ending
+      - id: detect-private-key

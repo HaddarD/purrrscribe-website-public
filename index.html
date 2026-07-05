@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Purrrscribe — Privacy-first voice ↔ text</title>
+  <meta name="description" content="Purrrscribe turns your voice into text and text into voice, fully offline. Coming soon.">
+  <link rel="icon" href="/assets/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&family=Assistant:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="site-header" id="site-header"></header>
+  <main id="main">
+    <section class="hero container">
+      <span class="badge"><span class="dot"></span><span data-i18n="home.badge">Coming soon</span></span>
+      <div class="cat-wrap" style="margin-top:18px">
+        <div class="purr" aria-hidden="true"><span></span><span></span><span></span></div>
+        <img class="cat" src="/assets/icon.png" alt="Purrrscribe — a cat wearing a headset">
+      </div>
+      <h1 class="wordmark" data-i18n="home.title">Purrrscribe</h1>
+      <p class="tagline" data-i18n-html="home.tagline">Privacy-first voice ↔ text.<br>Powered by purrrs.</p>
+      <p class="muted" style="margin:0 auto 26px" data-i18n="home.lead">An app that turns your voice into text and your text into voice — completely offline once it's set up.</p>
+
+      <div class="notify" id="notify">
+        <h2 data-i18n="notify.title">Be first to know</h2>
+        <p class="muted" data-i18n="notify.body">Purrrscribe isn't out yet. Leave your email and I'll let you know the moment it launches.</p>
+        <form class="pform" data-purrr="notify" novalidate>
+          <div class="notify-row">
+            <input type="email" name="email" placeholder="you@example.com" data-i18n-attr="placeholder:notify.placeholder" aria-label="Email address" required>
+            <button class="btn" type="submit" data-i18n="notify.button">Notify me</button>
+          </div>
+        </form>
+        <p class="notify-hint muted" data-i18n="notify.hint">One quick step — no spam, ever.</p>
+        <p class="form-ok" hidden data-i18n="notify.thanks">🐾 You're on the list! I'll email you the moment Purrrscribe launches.</p>
+        <p class="form-err" hidden data-i18n="notify.err">Hmm, that didn't go through. Please try again, or email hello@purrrscribe.com.</p>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="grid three">
+        <div class="card"><span class="emoji" aria-hidden="true">🎙️</span><h3 data-i18n="home.f1t">Speak → text</h3><p class="muted" data-i18n="home.f1b"></p></div>
+        <div class="card"><span class="emoji" aria-hidden="true">🔊</span><h3 data-i18n="home.f2t">Text → speech</h3><p class="muted" data-i18n="home.f2b"></p></div>
+        <div class="card"><span class="emoji" aria-hidden="true">🔒</span><h3 data-i18n="home.f3t">100% offline</h3><p class="muted" data-i18n="home.f3b"></p></div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="section-head">
+        <span class="eyebrow" data-i18n="home.privacyEyebrow">Why it's different</span>
+        <h2 data-i18n="home.privacyTitle">Your words stay yours</h2>
+        <p class="muted" data-i18n="home.privacyBody"></p>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer" id="site-footer"></footer>
+  <script src="/js/site.js"></script>
+</body>
+</html>

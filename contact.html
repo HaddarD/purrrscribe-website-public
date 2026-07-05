@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Purrrscribe — Contact</title>
+  <link rel="icon" href="/assets/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&family=Assistant:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="site-header" id="site-header"></header>
+  <main id="main">
+    <section class="container">
+      <div class="section-head">
+        <span class="eyebrow" data-i18n="contact.eyebrow">Contact</span>
+        <h1 data-i18n="contact.title">Get in touch</h1>
+        <p class="muted" data-i18n="contact.lead">Send a message below and it comes straight to me. I'm one person, so I'll reply as soon as I can — usually within 3–5 business days.</p>
+      </div>
+
+      <div class="card" style="max-width:560px;margin:0 auto">
+        <form class="pform" data-purrr="contact" novalidate>
+          <div class="field"><label for="cName" data-i18n="contact.fName">Your name</label><input id="cName" name="name" type="text" autocomplete="name" required></div>
+          <div class="field"><label for="cEmail" data-i18n="contact.fEmail">Your email</label><input id="cEmail" name="email" type="email" autocomplete="email" placeholder="you@example.com" data-i18n-attr="placeholder:notify.placeholder" required></div>
+          <div class="field"><label for="cSubject" data-i18n="contact.fSubject">Subject</label><input id="cSubject" name="subject" type="text" required></div>
+          <div class="field"><label for="cMsg" data-i18n="contact.fMessage">Message</label><textarea id="cMsg" name="message" required></textarea></div>
+          <button class="btn" type="submit" data-i18n="contact.send">Send message</button>
+        </form>
+        <p class="form-ok" hidden data-i18n="contact.thanks">🐾 Got it — thank you! I'll reply within 3–5 business days.</p>
+        <p class="form-err" hidden data-i18n="contact.err">Hmm, that didn't send. Please try again, or email me directly.</p>
+        <p style="text-align:center;margin-top:16px" class="muted"><span data-i18n="contact.orEmail">Prefer email?</span> <a class="copy-email" href="mailto:support@purrrscribe.com">support@purrrscribe.com</a></p>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer" id="site-footer"></footer>
+  <script src="/js/site.js"></script>
+</body>
+</html>
