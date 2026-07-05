@@ -1,0 +1,102 @@
+/* Purrrscribe — Giscus light theme (warm coral #e8b2a6)
+   Glass + accent line. Hosted on purrrscribe.com. */
+main {
+  --color-canvas-default: #f8f4ed;
+  --color-canvas-overlay: #f8f4ed;
+  --color-canvas-inset: #f1ece3;
+  --color-canvas-subtle: #f1ece3;
+  --color-border-default: #e0dbd2;
+  --color-border-muted: #e8e3da;
+  --color-border-overlay: #e0dbd2;
+  --color-fg-default: #1a1a1a;
+  --color-fg-muted: #6b6b6b;
+  --color-fg-subtle: #8a8a8a;
+  --color-fg-on-emphasis: #2a1f1f;
+  --color-accent-fg: #c4897c;
+  --color-accent-emphasis: #e8b2a6;
+  --color-accent-muted: rgba(232,178,166,.3);
+  --color-accent-subtle: rgba(232,178,166,.12);
+  --color-btn-primary-bg: #e8b2a6;
+  --color-btn-primary-text: #2a1f1f;
+  --color-btn-primary-border: #d49a8e;
+  --color-btn-primary-hover-bg: #d49a8e;
+  --color-btn-primary-hover-border: #c4897c;
+  --color-btn-primary-shadow: 0 2px 8px rgba(232,178,166,.25);
+  --color-btn-bg: #f1ece3;
+  --color-btn-border: #e0dbd2;
+  --color-btn-hover-bg: #ede7dc;
+  --color-btn-hover-border: #d8d3ca;
+  --color-btn-shadow: none;
+  --color-neutral-muted: rgba(0,0,0,.06);
+  --color-neutral-subtle: rgba(0,0,0,.03);
+  color-scheme: light;
+  font-family: 'Assistant', -apple-system, sans-serif;
+}
+/* Glass card effect + accent line */
+.gsc-comment {
+  border-radius: 16px !important;
+  border-top: 3px solid var(--color-accent-emphasis) !important;
+  box-shadow: 0 4px 20px rgba(0,0,0,.06) !important;
+  background: rgba(248,244,237,.85) !important;
+  overflow: hidden;
+}
+/* Reaction buttons */
+.gsc-reactions-button, .gsc-social-reaction-summary-item {
+  border-radius: 999px !important;
+  border: 1px solid rgba(232,178,166,.35) !important;
+  background: rgba(232,178,166,.08) !important;
+}
+.gsc-reactions-button:hover, .gsc-social-reaction-summary-item:hover {
+  background: rgba(232,178,166,.2) !important;
+}
+/* React emoji trigger circle */
+.gsc-direct-reaction-buttons button, .popup-emoji {
+  border-radius: 50% !important;
+  box-shadow: 0 1px 4px rgba(0,0,0,.08) !important;
+}
+/* Comment box tabs */
+.gsc-comment-box-tabs {
+  border-radius: 12px 12px 0 0 !important;
+  overflow: hidden !important;
+}
+/* Textarea */
+.gsc-comment-box-textarea {
+  border-radius: 0 0 12px 12px !important;
+  background: #f1ece3 !important;
+}
+/* Primary buttons (Comment, Reply) */
+.btn-primary, .gsc-comment-box-bottom .btn-primary {
+  border-radius: 999px !important;
+  background: linear-gradient(135deg, #e8b2a6, #d49a8e) !important;
+  color: #2a1f1f !important;
+  border: none !important;
+  box-shadow: 0 2px 10px rgba(232,178,166,.25) !important;
+  font-weight: 700 !important;
+}
+.btn-primary:hover {
+  background: linear-gradient(135deg, #d49a8e, #c4897c) !important;
+}
+/* Cancel / secondary buttons */
+.btn:not(.btn-primary) {
+  background: #f1ece3 !important;
+  border: 1px solid #e0dbd2 !important;
+  border-radius: 999px !important;
+  color: #6b6b6b !important;
+}
+/* Sign in button */
+.gsc-comment-box-is-not-logged-in .btn-primary {
+  border-radius: 999px !important;
+}
+/* Reply box */
+.gsc-reply-box {
+  border-radius: 12px !important;
+  border-top: 2px solid var(--color-accent-emphasis) !important;
+}
+/* Headings / display text */
+h3, h4, .gsc-comments-count {
+  font-family: 'Rubik', sans-serif !important;
+}
+/* Timeline connector */
+.gsc-timeline {
+  border-color: #e0dbd2 !important;
+}

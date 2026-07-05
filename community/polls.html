@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Purrrscribe — Your purrr matters</title>
+  <link rel="icon" href="/assets/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&family=Assistant:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="site-header" id="site-header"></header>
+  <main id="main">
+    <section class="container">
+      <a class="board-back" href="/community/">← <span data-i18n="nav.community">Community</span></a>
+      <div class="section-head">
+        <span class="eyebrow">📊 <span data-i18n="community.eyebrow">Community</span></span>
+        <h1 data-i18n="cat.polls.name">Your purrr matters</h1>
+        <p class="muted" data-i18n="cat.polls.desc"></p>
+      </div>
+      <div id="polls"><p class="poll-note" data-i18n="polls.loading">Loading polls…</p></div>
+      <p class="poll-note" data-i18n="polls.note">One vote per poll, per device. Totals are live for everyone. 🐾</p>
+    </section>
+  </main>
+  <footer class="site-footer" id="site-footer"></footer>
+  <script src="/js/site.js"></script>
+  <script>
+  (function(){
+    var box=document.getElementById('polls');
+    var W=(window.PURRR_WORKER||"").replace(/\/+$/,"");
+    function votedKey(id){return "purrrscribe.voted."+id;}
+    function hasVoted(id){ try{return !!localStorage.getItem(votedKey(id));}catch(e){return false;} }
+    function myVote(id){ try{return localStorage.getItem(votedKey(id));}catch(e){return null;} }
+    function setVoted(id,opt){ try{localStorage.setItem(votedKey(id),opt);}catch(e){} }
+
+    function render(polls){
+      box.innerHTML="";
+      if(!polls.length){ box.innerHTML='<p class="poll-note">No open polls right now — check back soon! 🐾</p>'; return; }
+      polls.forEach(function(p){
+        var card=document.createElement('div'); card.className='card poll-card';
+        var q=document.createElement('div'); q.className='poll-q'; q.textContent=p.question; card.appendChild(q);
+        var wrap=document.createElement('div'); card.appendChild(wrap);
+        function showResults(){
+          wrap.innerHTML="";
+          var total=p.options.reduce(function(a,o){return a+o.votes;},0);
+          var mine=[]; try{ var mv=myVote(p.id); mine=mv?(mv[0]==='['?JSON.parse(mv):[mv]):[]; }catch(e){ mine=[]; }
+          p.options.forEach(function(o){
+            var pct= total? Math.round(o.votes*100/total) : 0;
+            var bar=document.createElement('div'); bar.className='poll-bar'+(mine.indexOf(o.label)>-1?' mine':'');
+            bar.innerHTML='<div class="fill" style="width:'+pct+'%"></div><div class="row"><span>'+o.label+(mine===o.label?' ✓':'')+'</span><span class="pct">'+pct+'% · '+o.votes+'</span></div>';
+            wrap.appendChild(bar);
+          });
+          var t=document.createElement('div'); t.className='poll-total';
+          t.textContent=total+" votes"; wrap.appendChild(t);
+        }
+        function showVoting(){
+          wrap.innerHTML="";
+          var chosen={};
+          p.options.forEach(function(o){
+            var b=document.createElement('button'); b.type='button'; b.className='poll-opt'; b.textContent=o.label;
+            b.addEventListener('click',function(){
+              chosen[o.label]=!chosen[o.label];
+              b.classList.toggle('picked',!!chosen[o.label]);
+              submit.disabled=!Object.keys(chosen).some(function(k){return chosen[k];});
+            });
+            wrap.appendChild(b);
+          });
+          var submit=document.createElement('button'); submit.type='button'; submit.className='btn';
+          submit.style.cssText='width:100%;justify-content:center;margin-top:6px'; submit.disabled=true;
+          submit.textContent='Vote 🐾';
+          submit.addEventListener('click',function(){
+            var opts=Object.keys(chosen).filter(function(k){return chosen[k];});
+            if(!opts.length) return;
+            submit.disabled=true; submit.textContent='…';
+            fetch(W+'/vote',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({pollId:p.id,options:opts})})
+              .then(function(r){ if(!r.ok) throw 0; return r.json(); })
+              .then(function(fresh){ setVoted(p.id,JSON.stringify(opts)); p.options=fresh.options; showResults(); })
+              .catch(function(){ submit.disabled=false; submit.textContent='Vote 🐾'; alert('That vote didn\u2019t go through — please try again.'); });
+          });
+          wrap.appendChild(submit);
+          var sr=document.createElement('a'); sr.href='#'; sr.className='poll-total'; sr.style.display='inline-block';
+          sr.textContent='Just show me the results';
+          sr.addEventListener('click',function(e){e.preventDefault();showResults();});
+          wrap.appendChild(sr);
+        }
+        if(hasVoted(p.id)) showResults(); else showVoting();
+        box.appendChild(card);
+      });
+    }
+    fetch(W+'/polls').then(function(r){return r.json();}).then(render)
+      .catch(function(){ box.innerHTML='<p class="poll-note">Couldn\u2019t load the polls — please refresh. 🐾</p>'; });
+  })();
+  </script>
+</body>
+</html>
