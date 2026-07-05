@@ -117,20 +117,21 @@ h3, h4, .gsc-comments-count {
   box-shadow: 0 4px 18px rgba(0,0,0,.07) !important;
 }
 /* === Oldest / Newest toggle buttons === */
-.gsc-comments-count-title .BtnGroup .BtnGroup-item {
+.BtnGroup-item {
   border-radius: 999px !important;
   font-weight: 600 !important;
   padding: 4px 14px !important;
   border: 1px solid var(--color-border-default) !important;
+  margin-left: 4px !important;
 }
-.gsc-comments-count-title .BtnGroup .BtnGroup-item[aria-selected="true"],
-.gsc-comments-count-title .BtnGroup .BtnGroup-item.selected {
+.BtnGroup-item[aria-current="true"],
+.BtnGroup-item.selected,
+.BtnGroup-item[aria-selected="true"] {
   background: var(--color-accent-emphasis) !important;
   color: var(--color-fg-on-emphasis) !important;
   border-color: var(--color-accent-emphasis) !important;
 }
-.gsc-comments-count-title .BtnGroup .BtnGroup-item[aria-selected="false"],
-.gsc-comments-count-title .BtnGroup .BtnGroup-item:not(.selected) {
+.BtnGroup-item:not([aria-current="true"]):not(.selected):not([aria-selected="true"]) {
   background: var(--color-canvas-subtle) !important;
   color: var(--color-fg-muted) !important;
 }
