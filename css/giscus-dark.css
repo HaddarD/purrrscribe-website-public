@@ -1,0 +1,91 @@
+/* Purrrscribe — Giscus dark theme (light coral #f1b6b6)
+   Glass + accent line. Hosted on purrrscribe.com. */
+main {
+  --color-canvas-default: #222838;
+  --color-canvas-overlay: #222838;
+  --color-canvas-inset: #191e2c;
+  --color-canvas-subtle: #191e2c;
+  --color-border-default: #333a4d;
+  --color-border-muted: #2a3144;
+  --color-border-overlay: #333a4d;
+  --color-fg-default: #e8e4df;
+  --color-fg-muted: #9a9a9a;
+  --color-fg-subtle: #7a7a7a;
+  --color-fg-on-emphasis: #10131c;
+  --color-accent-fg: #f1b6b6;
+  --color-accent-emphasis: #f1b6b6;
+  --color-accent-muted: rgba(241,206,198,.3);
+  --color-accent-subtle: rgba(241,206,198,.1);
+  --color-btn-primary-bg: #f1b6b6;
+  --color-btn-primary-text: #10131c;
+  --color-btn-primary-border: #e89c9c;
+  --color-btn-primary-hover-bg: #e89c9c;
+  --color-btn-primary-hover-border: #d88a8a;
+  --color-btn-primary-shadow: 0 2px 8px rgba(241,206,198,.2);
+  --color-btn-bg: #2a3144;
+  --color-btn-border: #333a4d;
+  --color-btn-hover-bg: #333a4d;
+  --color-btn-hover-border: #3d4560;
+  --color-btn-shadow: none;
+  --color-neutral-muted: rgba(255,255,255,.08);
+  --color-neutral-subtle: rgba(255,255,255,.04);
+  color-scheme: dark;
+  font-family: 'Assistant', -apple-system, sans-serif;
+}
+.gsc-comment {
+  border-radius: 16px !important;
+  border-top: 3px solid var(--color-accent-emphasis) !important;
+  box-shadow: 0 4px 20px rgba(0,0,0,.2) !important;
+  background: rgba(34,40,56,.85) !important;
+  overflow: hidden;
+}
+.gsc-reactions-button, .gsc-social-reaction-summary-item {
+  border-radius: 999px !important;
+  border: 1px solid rgba(241,206,198,.3) !important;
+  background: rgba(241,206,198,.06) !important;
+}
+.gsc-reactions-button:hover, .gsc-social-reaction-summary-item:hover {
+  background: rgba(241,206,198,.16) !important;
+}
+.gsc-direct-reaction-buttons button, .popup-emoji {
+  border-radius: 50% !important;
+  box-shadow: 0 1px 4px rgba(0,0,0,.2) !important;
+}
+.gsc-comment-box-tabs {
+  border-radius: 12px 12px 0 0 !important;
+  overflow: hidden !important;
+}
+.gsc-comment-box-textarea {
+  border-radius: 0 0 12px 12px !important;
+  background: #191e2c !important;
+}
+.btn-primary, .gsc-comment-box-bottom .btn-primary {
+  border-radius: 999px !important;
+  background: linear-gradient(135deg, #f1b6b6, #e89c9c) !important;
+  color: #10131c !important;
+  border: none !important;
+  box-shadow: 0 2px 10px rgba(241,206,198,.2) !important;
+  font-weight: 700 !important;
+}
+.btn-primary:hover {
+  background: linear-gradient(135deg, #e89c9c, #d88a8a) !important;
+}
+.btn:not(.btn-primary) {
+  background: #2a3144 !important;
+  border: 1px solid #333a4d !important;
+  border-radius: 999px !important;
+  color: #9a9a9a !important;
+}
+.gsc-comment-box-is-not-logged-in .btn-primary {
+  border-radius: 999px !important;
+}
+.gsc-reply-box {
+  border-radius: 12px !important;
+  border-top: 2px solid var(--color-accent-emphasis) !important;
+}
+h3, h4, .gsc-comments-count {
+  font-family: 'Rubik', sans-serif !important;
+}
+.gsc-timeline {
+  border-color: #333a4d !important;
+}
