@@ -106,22 +106,34 @@ h3, h4, .gsc-comments-count {
   box-shadow: 0 4px 18px rgba(0,0,0,.07) !important;
 }
 /* === Oldest / Newest toggle buttons === */
-.BtnGroup-item {
-  border-radius: 999px !important;
-  font-weight: 600 !important;
-  padding: 4px 14px !important;
-  border: 1px solid var(--color-border-default) !important;
-  margin-left: 4px !important;
+.BtnGroup {
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
 }
 .BtnGroup-item {
   border: none !important;
   background: transparent !important;
+  list-style: none !important;
 }
-.BtnGroup-item--selected .btn,
-.BtnGroup-item--selected.btn {
+.BtnGroup-item .btn {
+  border-radius: 999px !important;
+  font-weight: 600 !important;
+  padding: 4px 14px !important;
+  margin-left: 4px !important;
+}
+.BtnGroup-item--selected .btn {
   background: var(--color-accent-emphasis) !important;
   color: var(--color-fg-on-emphasis) !important;
-  border-color: var(--color-accent-emphasis) !important;
+  border: none !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,.1) !important;
+}
+.BtnGroup-item:not(.BtnGroup-item--selected) .btn {
+  background: var(--color-canvas-subtle) !important;
+  color: var(--color-fg-muted) !important;
+  border: 1px solid var(--color-border-default) !important;
+  box-shadow: 0 1px 4px rgba(0,0,0,.06) !important;
 }
 /* === Reply box rounded === */
 .gsc-reply-box .gsc-comment-box {
