@@ -124,16 +124,11 @@ h3, h4, .gsc-comments-count {
   border: 1px solid var(--color-border-default) !important;
   margin-left: 4px !important;
 }
-.BtnGroup-item[aria-current="true"],
-.BtnGroup-item.selected,
-.BtnGroup-item[aria-selected="true"] {
+.BtnGroup-item--selected .btn,
+.BtnGroup-item--selected.btn {
   background: var(--color-accent-emphasis) !important;
   color: var(--color-fg-on-emphasis) !important;
   border-color: var(--color-accent-emphasis) !important;
-}
-.BtnGroup-item:not([aria-current="true"]):not(.selected):not([aria-selected="true"]) {
-  background: var(--color-canvas-subtle) !important;
-  color: var(--color-fg-muted) !important;
 }
 /* === Reply box rounded === */
 .gsc-reply-box .gsc-comment-box {
