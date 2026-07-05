@@ -113,6 +113,10 @@ h3, h4, .gsc-comments-count {
   border: 1px solid var(--color-border-default) !important;
   margin-left: 4px !important;
 }
+.BtnGroup-item {
+  border: none !important;
+  background: transparent !important;
+}
 .BtnGroup-item--selected .btn,
 .BtnGroup-item--selected.btn {
   background: var(--color-accent-emphasis) !important;
