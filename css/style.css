@@ -37,7 +37,7 @@
   --radius:16px;
   --radius-sm:10px;
   --maxw:1080px;
-  --font-display:'Rubik',system-ui,-apple-system,Segoe UI,Arial,sans-serif;
+  --font-display:'Josefin Sans','Rubik',system-ui,-apple-system,Segoe UI,Arial,sans-serif;
   --font-body:'Assistant','Rubik',system-ui,-apple-system,Segoe UI,Arial,sans-serif;
 }
 [data-theme="dark"]{
