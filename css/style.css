@@ -3,6 +3,8 @@
 @font-face{font-family:'Rubik';font-weight:500;font-style:normal;font-display:swap;src:url('/fonts/Rubik-Medium.woff2') format('woff2')}
 @font-face{font-family:'Rubik';font-weight:600;font-style:normal;font-display:swap;src:url('/fonts/Rubik-SemiBold.woff2') format('woff2')}
 @font-face{font-family:'Rubik';font-weight:700;font-style:normal;font-display:swap;src:url('/fonts/Rubik-Bold.woff2') format('woff2')}
+@font-face{font-family:'Josefin Sans';font-weight:600;font-style:normal;font-display:swap;src:url('/fonts/JosefinSans-SemiBold.woff2') format('woff2')}
+@font-face{font-family:'Josefin Sans';font-weight:700;font-style:normal;font-display:swap;src:url('/fonts/JosefinSans-Bold.woff2') format('woff2')}
 @font-face{font-family:'Assistant';font-weight:400;font-style:normal;font-display:swap;src:url('/fonts/Assistant-Regular.woff2') format('woff2')}
 @font-face{font-family:'Assistant';font-weight:600;font-style:normal;font-display:swap;src:url('/fonts/Assistant-SemiBold.woff2') format('woff2')}
 @font-face{font-family:'Assistant';font-weight:700;font-style:normal;font-display:swap;src:url('/fonts/Assistant-Bold.woff2') format('woff2')}
@@ -234,7 +236,7 @@ section{padding:clamp(40px,7vw,80px) 0}
   .menu-toggle{display:inline-flex;font-size:1.4rem;color:var(--ink);background:none;border:1px solid var(--line);border-radius:8px;padding:4px 10px;cursor:pointer}
   .nav-links.show{display:flex;position:absolute;top:100%;inset-inline:0;
     background:var(--surface);border-bottom:1px solid var(--line);flex-direction:column;padding:8px}
-  
+
 }
 
 /* ---- Accessibility ---------------------------------------- */
