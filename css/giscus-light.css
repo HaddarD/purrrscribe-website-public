@@ -159,3 +159,10 @@ h3, h4, .gsc-comments-count {
   border-radius: 999px !important;
   font-weight: 700 !important;
 }
+
+/* === Playpen Sans for comments and typing === */
+@font-face{font-family:'Playpen Sans';font-weight:400;font-style:normal;font-display:swap;src:url('https://purrrscribe.com/fonts/PlaypenSans-Regular.woff2') format('woff2')}
+.gsc-comment-content, .gsc-reply-content,
+.gsc-comment-box-textarea, .gsc-reply-box textarea {
+  font-family: 'Playpen Sans', 'Assistant', sans-serif !important;
+}

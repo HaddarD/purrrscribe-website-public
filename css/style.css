@@ -1,3 +1,18 @@
+/* ---- Self-hosted fonts (no Google Fonts request) ---- */
+@font-face{font-family:'Rubik';font-weight:400;font-style:normal;font-display:swap;src:url('/fonts/Rubik-Regular.woff2') format('woff2')}
+@font-face{font-family:'Rubik';font-weight:500;font-style:normal;font-display:swap;src:url('/fonts/Rubik-Medium.woff2') format('woff2')}
+@font-face{font-family:'Rubik';font-weight:600;font-style:normal;font-display:swap;src:url('/fonts/Rubik-SemiBold.woff2') format('woff2')}
+@font-face{font-family:'Rubik';font-weight:700;font-style:normal;font-display:swap;src:url('/fonts/Rubik-Bold.woff2') format('woff2')}
+@font-face{font-family:'Assistant';font-weight:400;font-style:normal;font-display:swap;src:url('/fonts/Assistant-Regular.woff2') format('woff2')}
+@font-face{font-family:'Assistant';font-weight:600;font-style:normal;font-display:swap;src:url('/fonts/Assistant-SemiBold.woff2') format('woff2')}
+@font-face{font-family:'Assistant';font-weight:700;font-style:normal;font-display:swap;src:url('/fonts/Assistant-Bold.woff2') format('woff2')}
+@font-face{font-family:'Playpen Sans';font-weight:400;font-style:normal;font-display:swap;src:url('/fonts/PlaypenSans-Regular.woff2') format('woff2')}
+
+/* ---- CLS fix: reserve space for JS-injected header/footer ---- */
+#site-header{min-height:56px}
+#site-footer{min-height:200px}
+.giscus{min-height:300px}
+
 /* ============================================================
    Purrrscribe — shared stylesheet
    Light = warm tan + teal · Dark = navy + coral
@@ -219,7 +234,7 @@ section{padding:clamp(40px,7vw,80px) 0}
   .menu-toggle{display:inline-flex;font-size:1.4rem;color:var(--ink);background:none;border:1px solid var(--line);border-radius:8px;padding:4px 10px;cursor:pointer}
   .nav-links.show{display:flex;position:absolute;top:100%;inset-inline:0;
     background:var(--surface);border-bottom:1px solid var(--line);flex-direction:column;padding:8px}
-
+  
 }
 
 /* ---- Accessibility ---------------------------------------- */
@@ -330,3 +345,7 @@ main > section{padding-top:24px !important;padding-bottom:24px !important}
 .section-head p{max-width:94ch}
 /* auto text-wrap tuning removed — all breaks are deliberate <br> now */
 .about-card em{white-space:nowrap}  /* "powered by purrrs" never splits mid-phrase */
+
+/* ---- Playpen Sans for typed/input areas ---- */
+input[type="text"],input[type="email"],textarea,.field input,.field textarea{
+  font-family:'Playpen Sans','Assistant',sans-serif}

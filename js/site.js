@@ -100,7 +100,7 @@
   var THEME_KEY="purrrscribe.theme";
   function systemDark(){ try{ return matchMedia("(prefers-color-scheme:dark)").matches; }catch(e){ return false; } }
   function resolveTheme(m){ return m==="auto"?(systemDark()?"dark":"light"):m; }
-  function syncGiscus(r){ try{ var live=location.hostname.indexOf("purrrscribe.com")>-1; var t=live?(location.origin+(r==="dark"?"/css/giscus-dark.css?v=3":"/css/giscus-light.css?v=3")):(r==="dark"?"dark_dimmed":"light"); var f=document.querySelector("iframe.giscus-frame"); if(f&&f.contentWindow) f.contentWindow.postMessage({giscus:{setConfig:{theme:t}}},"https://giscus.app"); }catch(e){} }
+  function syncGiscus(r){ try{ var live=location.hostname.indexOf("purrrscribe.com")>-1; var t=live?(location.origin+(r==="dark"?"/css/giscus-dark.css?v=4":"/css/giscus-light.css?v=4")):(r==="dark"?"dark_dimmed":"light"); var f=document.querySelector("iframe.giscus-frame"); if(f&&f.contentWindow) f.contentWindow.postMessage({giscus:{setConfig:{theme:t}}},"https://giscus.app"); }catch(e){} }
   function applyTheme(m){
     var r=resolveTheme(m); document.documentElement.setAttribute("data-theme",r);
     var b=document.getElementById("themeBtn"); if(b) b.innerHTML=(m==="auto"?auto():m==="dark"?moon():sun())+'<span style="font-size:.78rem">'+(m==="auto"?"Auto":m==="dark"?"Dark":"Light")+'</span>';
