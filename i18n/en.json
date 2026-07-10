@@ -107,5 +107,20 @@
   "contact.q5": "Can I back up my data?",
   "contact.a5": "Yes, and it stays in your hands,<br>back up to storage you choose (a USB drive, your own cloud, etc.).<br>Nothing is ever sent anywhere without you choosing it.",
   "polls.loading": "Loading polls…",
-  "polls.note": "Pick as many options as apply, then hit Vote.<br>One ballot per device — totals are live for everyone. 🐾"
+  "polls.note": "Pick as many options as apply, then hit Vote.<br>One ballot per device — totals are live for everyone. 🐾",
+  "nav.privacy": "Privacy Policy",
+  "faq.privacyTitle": "Privacy & data",
+  "faq.pq1": "Does Purrrscribe collect my data?",
+  "faq.pa1": "No. The app runs fully on your device and has no backend servers.<br>The only internet connections are for downloading voice or language packages (one-time),<br>subscription verification through Google Play, and app updates.<br>We do not collect, store, or have access to anything you say or type.",
+  "faq.pa1link": "Read our full Privacy Policy →",
+  "faq.pq2": "What does the website collect?",
+  "faq.pa2": "Only what you voluntarily provide.<br>If you sign up for the launch notification, your email is stored to send you that one message.<br>If you send a contact message, your name, email, and message are stored so we can reply.<br>Poll votes are anonymous counts only — no personal data attached.<br>Nothing is shared with third parties for marketing purposes.",
+  "faq.pa2link": "Read our full Privacy Policy →",
+  "faq.pq3": "How do the website demos work?",
+  "faq.pa3": "The demos process your voice or text sample using Hugging Face Spaces,<br>a cloud service — your input is sent there, processed, and returned.<br>It is not saved or logged by us (input logging is explicitly disabled in the build),<br>and is not shared with anyone.<br>This applies to demos only — the full app works entirely offline with downloaded packages.",
+  "faq.pa3link": "Read our full Privacy Policy →",
+  "faq.pq4": "What still requires an internet connection?",
+  "faq.pa4": "Downloading new voice or language packages (one-time per package).<br>Subscription verification through Google Play (periodic, automatic).<br>App updates from Google Play.<br>Website features: demos, forms, and community comments.<br>Everything else — recording, transcribing, listening — works fully offline.",
+  "faq.pa4link": "Read our full Privacy Policy →",
+  "demos.cloudNote": "☁️ This demo processes your input using Hugging Face's cloud service — not on your device.<br>This applies to demos only. The full app works entirely offline."
 }

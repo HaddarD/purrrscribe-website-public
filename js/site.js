@@ -90,6 +90,7 @@
     <div class="footer-col"><h4 data-i18n="footer.support">Support</h4>\
       <a href="/faq.html" data-i18n="nav.faq">FAQ</a>\
       <a href="/contact.html" data-i18n="nav.contact">Contact</a>\
+      <a href="/privacy.html" data-i18n="nav.privacy">Privacy Policy</a>\
       <a href="mailto:'+EMAIL_SUPPORT+'">'+EMAIL_SUPPORT+'</a></div>\
   </div>\
 </div>\
